@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  db:
+    image: postgres:15.1
+    container_name: timesheet_db
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./db_data:/var/lib/postgresql/data
+      - ./init_schema:/docker-entrypoint-initdb.d
+    environment:
+      POSTGRES_PASSWORD: 123qwe
+      POSTGRES_USER: timesheet
+      POSTGRES_DB: timesheet

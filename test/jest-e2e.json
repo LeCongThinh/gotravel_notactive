@@ -1,0 +1,25 @@
+{
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "@app/auth/(.*)": "<rootDir>/../libs/auth/src/$1",
+    "@app/auth": "<rootDir>/../libs/auth/src",
+    "@app/database/(.*)": "<rootDir>/../libs/database/src/$1",
+    "@app/database": "<rootDir>/../libs/database/src",
+    "@app/logging/(.*)": "<rootDir>/../libs/logging/src/$1",
+    "@app/logging": "<rootDir>/../libs/logging/src",
+    "@app/mailer/(.*)": "<rootDir>/../libs/mailer/src/$1",
+    "@app/mailer": "<rootDir>/../libs/mailer/src",
+    "@app/rest-api/(.*)": "<rootDir>/../libs/rest-api/src/$1",
+    "@app/rest-api": "<rootDir>/../libs/rest-api/src"
+  }
+}

@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  db:
+    image: postgres:15.1
+    container_name: db_travel
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./db_data:/var/lib/postgresql/data
+      - ./init_schema:/docker-entrypoint-initdb.d
+    environment:
+      POSTGRES_PASSWORD: 123travel
+      POSTGRES_USER: travel
+      POSTGRES_DB: timesheet
